@@ -1,0 +1,287 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-image: url("../../assets/images/placeholder.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-secondary-button {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+.hero-secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Video Section */
+.video-section {
+  padding: 4rem 0;
+  background-color: rgba(241, 245, 249, 0.3);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-placeholder-text {
+  color: var(--muted-foreground);
+}
+
+.video-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-description {
+  color: var(--muted-foreground);
+  font-size: 1.125rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contact-label {
+  font-weight: 500;
+}
+
+.contact-link {
+  color: var(--primary);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.testimonials {
+  margin-top: 1rem;
+}
+
+.testimonials-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.testimonial-card {
+  height: 100%;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 0;
+}
+
+.about-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.photo-item {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Founder Section */
+.founder-section {
+  padding: 4rem 0;
+  background-color: rgba(241, 245, 249, 0.3);
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.founder-quote {
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  font-size: 3rem;
+  color: rgba(139, 92, 246, 0.2);
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-weight: 500;
+}
+
+.founder-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.founder-photo {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .founder-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .founder-quote {
+    order: 1;
+  }
+
+  .founder-photos {
+    order: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
